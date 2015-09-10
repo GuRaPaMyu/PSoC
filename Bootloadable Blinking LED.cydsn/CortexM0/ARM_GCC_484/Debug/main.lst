@@ -1,0 +1,538 @@
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	__aeabi_i2d
+  18              		.global	__aeabi_dmul
+  19              		.global	__aeabi_d2uiz
+  20              		.section	.text.main,"ax",%progbits
+  21              		.align	2
+  22              		.global	main
+  23              		.code	16
+  24              		.thumb_func
+  25              		.type	main, %function
+  26              	main:
+  27              	.LFB33:
+  28              		.file 1 ".\\main.c"
+   1:.\main.c      **** /******************************************************************************
+   2:.\main.c      **** * Project Name		: Bootloadable Blinking LED
+   3:.\main.c      **** * File Name			: main.c
+   4:.\main.c      **** * Version 			: 1.0
+   5:.\main.c      **** * Device Used		: CY8C4245AXI-483
+   6:.\main.c      **** * Software Used		: PSoC Creator 3.1
+   7:.\main.c      **** * Compiler    		: ARMGCC 4.8.4, ARM RVDS Generic, ARM MDK Generic
+   8:.\main.c      **** * Related Hardware	: CY8CKIT-049-42xx PSoC 4 Prototyping Kit 
+   9:.\main.c      **** *
+  10:.\main.c      **** ********************************************************************************
+  11:.\main.c      **** * Copyright (2015), Cypress Semiconductor Corporation. All Rights Reserved.
+  12:.\main.c      **** ********************************************************************************
+  13:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  14:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
+  15:.\main.c      **** * States and foreign), United States copyright laws and international treaty
+  16:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  17:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
+  18:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
+  19:.\main.c      **** * purpose of creating custom software in support of licensee product to be
+  20:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
+  21:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
+  22:.\main.c      **** * compilation, or representation of this software except as specified above 
+  23:.\main.c      **** * is prohibited without the express written permission of Cypress.
+  24:.\main.c      **** *
+  25:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  26:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  27:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
+  29:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 2
+
+
+  30:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
+  31:.\main.c      **** * does not authorize its products for use as critical components in life-support 
+  32:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
+  33:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  34:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
+  35:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
+  36:.\main.c      **** *
+  37:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
+  38:.\main.c      **** * software license agreement. 
+  39:.\main.c      **** *******************************************************************************/
+  40:.\main.c      **** 
+  41:.\main.c      **** /******************************************************************************
+  42:.\main.c      **** *                           THEORY OF OPERATION
+  43:.\main.c      **** * This is a blinking LED project. A PWM component drives the pin to blink the 
+  44:.\main.c      **** * LED at regular intervals. This project contains a bootloadable component so 
+  45:.\main.c      **** * that it can be bootloaded into PSoC 4 which has a bootloader already programmed 
+  46:.\main.c      **** * into it.
+  47:.\main.c      **** * Default UART Port Configuration for bootloading the PSoC 4 in CY8CKIT-049-42xx
+  48:.\main.c      **** * Baud Rate : 115200 bps
+  49:.\main.c      **** * Data Bits : 8
+  50:.\main.c      **** * Stop Bits : 1
+  51:.\main.c      **** * Parity    : None
+  52:.\main.c      **** ******************************************************************************/
+  53:.\main.c      **** #include <project.h>
+  54:.\main.c      **** #include <math.h>
+  55:.\main.c      **** 
+  56:.\main.c      **** #define PARTS 1000
+  57:.\main.c      **** 
+  58:.\main.c      **** int main()
+  59:.\main.c      **** {
+  29              		.loc 1 59 0
+  30              		.cfi_startproc
+  31 0000 B0B5     		push	{r4, r5, r7, lr}
+  32              		.cfi_def_cfa_offset 16
+  33              		.cfi_offset 4, -16
+  34              		.cfi_offset 5, -12
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 86B0     		sub	sp, sp, #24
+  38              		.cfi_def_cfa_offset 40
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  60:.\main.c      ****     UART_Start();
+  41              		.loc 1 60 0
+  42 0006 FFF7FEFF 		bl	UART_Start
+  61:.\main.c      ****     
+  62:.\main.c      ****     int i;
+  63:.\main.c      ****     unsigned char sin_val;
+  64:.\main.c      ****     double inc_rate;
+  65:.\main.c      ****     
+  66:.\main.c      ****     inc_rate = M_PI * 2 / PARTS;
+  43              		.loc 1 66 0
+  44 000a 184C     		ldr	r4, .L5+4
+  45 000c 164B     		ldr	r3, .L5
+  46 000e BB60     		str	r3, [r7, #8]
+  47 0010 FC60     		str	r4, [r7, #12]
+  48              	.L4:
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 3
+
+
+  67:.\main.c      ****     
+  68:.\main.c      **** 	for(;;)
+  69:.\main.c      ****     {
+  70:.\main.c      ****       for(i=0;i<PARTS;i++)
+  49              		.loc 1 70 0
+  50 0012 0023     		mov	r3, #0
+  51 0014 7B61     		str	r3, [r7, #20]
+  52 0016 21E0     		b	.L2
+  53              	.L3:
+  71:.\main.c      ****       {
+  72:.\main.c      ****         sin_val = (unsigned char)sin(inc_rate * i);
+  54              		.loc 1 72 0 discriminator 2
+  55 0018 7869     		ldr	r0, [r7, #20]
+  56 001a FFF7FEFF 		bl	__aeabi_i2d
+  57 001e 031C     		mov	r3, r0
+  58 0020 0C1C     		mov	r4, r1
+  59 0022 181C     		mov	r0, r3
+  60 0024 211C     		mov	r1, r4
+  61 0026 BA68     		ldr	r2, [r7, #8]
+  62 0028 FB68     		ldr	r3, [r7, #12]
+  63 002a FFF7FEFF 		bl	__aeabi_dmul
+  64 002e 031C     		mov	r3, r0
+  65 0030 0C1C     		mov	r4, r1
+  66 0032 181C     		mov	r0, r3
+  67 0034 211C     		mov	r1, r4
+  68 0036 FFF7FEFF 		bl	sin
+  69 003a 031C     		mov	r3, r0
+  70 003c 0C1C     		mov	r4, r1
+  71 003e FD1D     		add	r5, r7, #7
+  72 0040 181C     		mov	r0, r3
+  73 0042 211C     		mov	r1, r4
+  74 0044 FFF7FEFF 		bl	__aeabi_d2uiz
+  75 0048 031C     		mov	r3, r0
+  76 004a 2B70     		strb	r3, [r5]
+  73:.\main.c      ****         UART_PutChar(sin_val);
+  77              		.loc 1 73 0 discriminator 2
+  78 004c FB1D     		add	r3, r7, #7
+  79 004e 1B78     		ldrb	r3, [r3]
+  80 0050 181C     		mov	r0, r3
+  81 0052 FFF7FEFF 		bl	UART_PutChar
+  70:.\main.c      ****       for(i=0;i<PARTS;i++)
+  82              		.loc 1 70 0 discriminator 2
+  83 0056 7B69     		ldr	r3, [r7, #20]
+  84 0058 0133     		add	r3, r3, #1
+  85 005a 7B61     		str	r3, [r7, #20]
+  86              	.L2:
+  70:.\main.c      ****       for(i=0;i<PARTS;i++)
+  87              		.loc 1 70 0 is_stmt 0 discriminator 1
+  88 005c 7A69     		ldr	r2, [r7, #20]
+  89 005e 044B     		ldr	r3, .L5+8
+  90 0060 9A42     		cmp	r2, r3
+  91 0062 D9DD     		ble	.L3
+  74:.\main.c      ****       }
+  75:.\main.c      ****     }
+  92              		.loc 1 75 0 is_stmt 1
+  93 0064 D5E7     		b	.L4
+  94              	.L6:
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 4
+
+
+  95 0066 C046     		.align	3
+  96              	.L5:
+  97 0068 C3718BB6 		.word	-1232375357
+  98 006c 65BC793F 		.word	1064942693
+  99 0070 E7030000 		.word	999
+ 100              		.cfi_endproc
+ 101              	.LFE33:
+ 102              		.size	main, .-main
+ 103 0074 C046C046 		.text
+ 104              	.Letext0:
+ 105              		.section	.debug_info,"",%progbits
+ 106              	.Ldebug_info0:
+ 107 0000 C9000000 		.4byte	0xc9
+ 108 0004 0400     		.2byte	0x4
+ 109 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 110 000a 04       		.byte	0x4
+ 111 000b 01       		.uleb128 0x1
+ 112 000c 57000000 		.4byte	.LASF16
+ 113 0010 01       		.byte	0x1
+ 114 0011 53010000 		.4byte	.LASF17
+ 115 0015 2B010000 		.4byte	.LASF18
+ 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 117 001d 00000000 		.4byte	0
+ 118 0021 00000000 		.4byte	.Ldebug_line0
+ 119 0025 02       		.uleb128 0x2
+ 120 0026 01       		.byte	0x1
+ 121 0027 06       		.byte	0x6
+ 122 0028 13010000 		.4byte	.LASF0
+ 123 002c 02       		.uleb128 0x2
+ 124 002d 01       		.byte	0x1
+ 125 002e 08       		.byte	0x8
+ 126 002f D3000000 		.4byte	.LASF1
+ 127 0033 02       		.uleb128 0x2
+ 128 0034 02       		.byte	0x2
+ 129 0035 05       		.byte	0x5
+ 130 0036 EF000000 		.4byte	.LASF2
+ 131 003a 02       		.uleb128 0x2
+ 132 003b 02       		.byte	0x2
+ 133 003c 07       		.byte	0x7
+ 134 003d 00010000 		.4byte	.LASF3
+ 135 0041 02       		.uleb128 0x2
+ 136 0042 04       		.byte	0x4
+ 137 0043 05       		.byte	0x5
+ 138 0044 E6000000 		.4byte	.LASF4
+ 139 0048 02       		.uleb128 0x2
+ 140 0049 04       		.byte	0x4
+ 141 004a 07       		.byte	0x7
+ 142 004b 20000000 		.4byte	.LASF5
+ 143 004f 02       		.uleb128 0x2
+ 144 0050 08       		.byte	0x8
+ 145 0051 05       		.byte	0x5
+ 146 0052 00000000 		.4byte	.LASF6
+ 147 0056 02       		.uleb128 0x2
+ 148 0057 08       		.byte	0x8
+ 149 0058 07       		.byte	0x7
+ 150 0059 3A000000 		.4byte	.LASF7
+ 151 005d 03       		.uleb128 0x3
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 5
+
+
+ 152 005e 04       		.byte	0x4
+ 153 005f 05       		.byte	0x5
+ 154 0060 696E7400 		.ascii	"int\000"
+ 155 0064 02       		.uleb128 0x2
+ 156 0065 04       		.byte	0x4
+ 157 0066 07       		.byte	0x7
+ 158 0067 0E000000 		.4byte	.LASF8
+ 159 006b 02       		.uleb128 0x2
+ 160 006c 04       		.byte	0x4
+ 161 006d 04       		.byte	0x4
+ 162 006e 51000000 		.4byte	.LASF9
+ 163 0072 02       		.uleb128 0x2
+ 164 0073 08       		.byte	0x8
+ 165 0074 04       		.byte	0x4
+ 166 0075 F9000000 		.4byte	.LASF10
+ 167 0079 02       		.uleb128 0x2
+ 168 007a 01       		.byte	0x1
+ 169 007b 08       		.byte	0x8
+ 170 007c E1000000 		.4byte	.LASF11
+ 171 0080 02       		.uleb128 0x2
+ 172 0081 04       		.byte	0x4
+ 173 0082 07       		.byte	0x7
+ 174 0083 65010000 		.4byte	.LASF12
+ 175 0087 02       		.uleb128 0x2
+ 176 0088 08       		.byte	0x8
+ 177 0089 04       		.byte	0x4
+ 178 008a 1F010000 		.4byte	.LASF13
+ 179 008e 04       		.uleb128 0x4
+ 180 008f 1B000000 		.4byte	.LASF19
+ 181 0093 01       		.byte	0x1
+ 182 0094 3A       		.byte	0x3a
+ 183 0095 5D000000 		.4byte	0x5d
+ 184 0099 00000000 		.4byte	.LFB33
+ 185 009d 74000000 		.4byte	.LFE33-.LFB33
+ 186 00a1 01       		.uleb128 0x1
+ 187 00a2 9C       		.byte	0x9c
+ 188 00a3 05       		.uleb128 0x5
+ 189 00a4 6900     		.ascii	"i\000"
+ 190 00a6 01       		.byte	0x1
+ 191 00a7 3E       		.byte	0x3e
+ 192 00a8 5D000000 		.4byte	0x5d
+ 193 00ac 02       		.uleb128 0x2
+ 194 00ad 91       		.byte	0x91
+ 195 00ae 6C       		.sleb128 -20
+ 196 00af 06       		.uleb128 0x6
+ 197 00b0 32000000 		.4byte	.LASF14
+ 198 00b4 01       		.byte	0x1
+ 199 00b5 3F       		.byte	0x3f
+ 200 00b6 2C000000 		.4byte	0x2c
+ 201 00ba 02       		.uleb128 0x2
+ 202 00bb 91       		.byte	0x91
+ 203 00bc 5F       		.sleb128 -33
+ 204 00bd 06       		.uleb128 0x6
+ 205 00be 5C010000 		.4byte	.LASF15
+ 206 00c2 01       		.byte	0x1
+ 207 00c3 40       		.byte	0x40
+ 208 00c4 72000000 		.4byte	0x72
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 6
+
+
+ 209 00c8 02       		.uleb128 0x2
+ 210 00c9 91       		.byte	0x91
+ 211 00ca 60       		.sleb128 -32
+ 212 00cb 00       		.byte	0
+ 213 00cc 00       		.byte	0
+ 214              		.section	.debug_abbrev,"",%progbits
+ 215              	.Ldebug_abbrev0:
+ 216 0000 01       		.uleb128 0x1
+ 217 0001 11       		.uleb128 0x11
+ 218 0002 01       		.byte	0x1
+ 219 0003 25       		.uleb128 0x25
+ 220 0004 0E       		.uleb128 0xe
+ 221 0005 13       		.uleb128 0x13
+ 222 0006 0B       		.uleb128 0xb
+ 223 0007 03       		.uleb128 0x3
+ 224 0008 0E       		.uleb128 0xe
+ 225 0009 1B       		.uleb128 0x1b
+ 226 000a 0E       		.uleb128 0xe
+ 227 000b 55       		.uleb128 0x55
+ 228 000c 17       		.uleb128 0x17
+ 229 000d 11       		.uleb128 0x11
+ 230 000e 01       		.uleb128 0x1
+ 231 000f 10       		.uleb128 0x10
+ 232 0010 17       		.uleb128 0x17
+ 233 0011 00       		.byte	0
+ 234 0012 00       		.byte	0
+ 235 0013 02       		.uleb128 0x2
+ 236 0014 24       		.uleb128 0x24
+ 237 0015 00       		.byte	0
+ 238 0016 0B       		.uleb128 0xb
+ 239 0017 0B       		.uleb128 0xb
+ 240 0018 3E       		.uleb128 0x3e
+ 241 0019 0B       		.uleb128 0xb
+ 242 001a 03       		.uleb128 0x3
+ 243 001b 0E       		.uleb128 0xe
+ 244 001c 00       		.byte	0
+ 245 001d 00       		.byte	0
+ 246 001e 03       		.uleb128 0x3
+ 247 001f 24       		.uleb128 0x24
+ 248 0020 00       		.byte	0
+ 249 0021 0B       		.uleb128 0xb
+ 250 0022 0B       		.uleb128 0xb
+ 251 0023 3E       		.uleb128 0x3e
+ 252 0024 0B       		.uleb128 0xb
+ 253 0025 03       		.uleb128 0x3
+ 254 0026 08       		.uleb128 0x8
+ 255 0027 00       		.byte	0
+ 256 0028 00       		.byte	0
+ 257 0029 04       		.uleb128 0x4
+ 258 002a 2E       		.uleb128 0x2e
+ 259 002b 01       		.byte	0x1
+ 260 002c 3F       		.uleb128 0x3f
+ 261 002d 19       		.uleb128 0x19
+ 262 002e 03       		.uleb128 0x3
+ 263 002f 0E       		.uleb128 0xe
+ 264 0030 3A       		.uleb128 0x3a
+ 265 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 7
+
+
+ 266 0032 3B       		.uleb128 0x3b
+ 267 0033 0B       		.uleb128 0xb
+ 268 0034 49       		.uleb128 0x49
+ 269 0035 13       		.uleb128 0x13
+ 270 0036 11       		.uleb128 0x11
+ 271 0037 01       		.uleb128 0x1
+ 272 0038 12       		.uleb128 0x12
+ 273 0039 06       		.uleb128 0x6
+ 274 003a 40       		.uleb128 0x40
+ 275 003b 18       		.uleb128 0x18
+ 276 003c 9642     		.uleb128 0x2116
+ 277 003e 19       		.uleb128 0x19
+ 278 003f 00       		.byte	0
+ 279 0040 00       		.byte	0
+ 280 0041 05       		.uleb128 0x5
+ 281 0042 34       		.uleb128 0x34
+ 282 0043 00       		.byte	0
+ 283 0044 03       		.uleb128 0x3
+ 284 0045 08       		.uleb128 0x8
+ 285 0046 3A       		.uleb128 0x3a
+ 286 0047 0B       		.uleb128 0xb
+ 287 0048 3B       		.uleb128 0x3b
+ 288 0049 0B       		.uleb128 0xb
+ 289 004a 49       		.uleb128 0x49
+ 290 004b 13       		.uleb128 0x13
+ 291 004c 02       		.uleb128 0x2
+ 292 004d 18       		.uleb128 0x18
+ 293 004e 00       		.byte	0
+ 294 004f 00       		.byte	0
+ 295 0050 06       		.uleb128 0x6
+ 296 0051 34       		.uleb128 0x34
+ 297 0052 00       		.byte	0
+ 298 0053 03       		.uleb128 0x3
+ 299 0054 0E       		.uleb128 0xe
+ 300 0055 3A       		.uleb128 0x3a
+ 301 0056 0B       		.uleb128 0xb
+ 302 0057 3B       		.uleb128 0x3b
+ 303 0058 0B       		.uleb128 0xb
+ 304 0059 49       		.uleb128 0x49
+ 305 005a 13       		.uleb128 0x13
+ 306 005b 02       		.uleb128 0x2
+ 307 005c 18       		.uleb128 0x18
+ 308 005d 00       		.byte	0
+ 309 005e 00       		.byte	0
+ 310 005f 00       		.byte	0
+ 311              		.section	.debug_aranges,"",%progbits
+ 312 0000 1C000000 		.4byte	0x1c
+ 313 0004 0200     		.2byte	0x2
+ 314 0006 00000000 		.4byte	.Ldebug_info0
+ 315 000a 04       		.byte	0x4
+ 316 000b 00       		.byte	0
+ 317 000c 0000     		.2byte	0
+ 318 000e 0000     		.2byte	0
+ 319 0010 00000000 		.4byte	.LFB33
+ 320 0014 74000000 		.4byte	.LFE33-.LFB33
+ 321 0018 00000000 		.4byte	0
+ 322 001c 00000000 		.4byte	0
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 8
+
+
+ 323              		.section	.debug_ranges,"",%progbits
+ 324              	.Ldebug_ranges0:
+ 325 0000 00000000 		.4byte	.LFB33
+ 326 0004 74000000 		.4byte	.LFE33
+ 327 0008 00000000 		.4byte	0
+ 328 000c 00000000 		.4byte	0
+ 329              		.section	.debug_line,"",%progbits
+ 330              	.Ldebug_line0:
+ 331 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 331      02001F00 
+ 331      00000201 
+ 331      FB0E0D00 
+ 331      01010101 
+ 332              	.LASF6:
+ 333 0000 6C6F6E67 		.ascii	"long long int\000"
+ 333      206C6F6E 
+ 333      6720696E 
+ 333      7400
+ 334              	.LASF8:
+ 335 000e 756E7369 		.ascii	"unsigned int\000"
+ 335      676E6564 
+ 335      20696E74 
+ 335      00
+ 336              	.LASF19:
+ 337 001b 6D61696E 		.ascii	"main\000"
+ 337      00
+ 338              	.LASF5:
+ 339 0020 6C6F6E67 		.ascii	"long unsigned int\000"
+ 339      20756E73 
+ 339      69676E65 
+ 339      6420696E 
+ 339      7400
+ 340              	.LASF14:
+ 341 0032 73696E5F 		.ascii	"sin_val\000"
+ 341      76616C00 
+ 342              	.LASF7:
+ 343 003a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 343      206C6F6E 
+ 343      6720756E 
+ 343      7369676E 
+ 343      65642069 
+ 344              	.LASF9:
+ 345 0051 666C6F61 		.ascii	"float\000"
+ 345      7400
+ 346              	.LASF16:
+ 347 0057 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 347      4320342E 
+ 347      382E3420 
+ 347      32303134 
+ 347      30353236 
+ 348 008a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 348      20726576 
+ 348      6973696F 
+ 348      6E203231 
+ 348      31333538 
+ 349 00bd 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 349      66756E63 
+ARM GAS  C:\Users\HASHIM~1\AppData\Local\Temp\ccMDxnPs.s 			page 9
+
+
+ 349      74696F6E 
+ 349      2D736563 
+ 349      74696F6E 
+ 350              	.LASF1:
+ 351 00d3 756E7369 		.ascii	"unsigned char\000"
+ 351      676E6564 
+ 351      20636861 
+ 351      7200
+ 352              	.LASF11:
+ 353 00e1 63686172 		.ascii	"char\000"
+ 353      00
+ 354              	.LASF4:
+ 355 00e6 6C6F6E67 		.ascii	"long int\000"
+ 355      20696E74 
+ 355      00
+ 356              	.LASF2:
+ 357 00ef 73686F72 		.ascii	"short int\000"
+ 357      7420696E 
+ 357      7400
+ 358              	.LASF10:
+ 359 00f9 646F7562 		.ascii	"double\000"
+ 359      6C6500
+ 360              	.LASF3:
+ 361 0100 73686F72 		.ascii	"short unsigned int\000"
+ 361      7420756E 
+ 361      7369676E 
+ 361      65642069 
+ 361      6E7400
+ 362              	.LASF0:
+ 363 0113 7369676E 		.ascii	"signed char\000"
+ 363      65642063 
+ 363      68617200 
+ 364              	.LASF13:
+ 365 011f 6C6F6E67 		.ascii	"long double\000"
+ 365      20646F75 
+ 365      626C6500 
+ 366              	.LASF18:
+ 367 012b 5A3A5C50 		.ascii	"Z:\\PSoC\\Bootloadable Blinking LED.cydsn\000"
+ 367      536F435C 
+ 367      426F6F74 
+ 367      6C6F6164 
+ 367      61626C65 
+ 368              	.LASF17:
+ 369 0153 2E5C6D61 		.ascii	".\\main.c\000"
+ 369      696E2E63 
+ 369      00
+ 370              	.LASF15:
+ 371 015c 696E635F 		.ascii	"inc_rate\000"
+ 371      72617465 
+ 371      00
+ 372              	.LASF12:
+ 373 0165 73697A65 		.ascii	"sizetype\000"
+ 373      74797065 
+ 373      00
+ 374              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

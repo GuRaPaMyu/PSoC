@@ -1,0 +1,6 @@
+Z:\PSoC\Bootloadable Blinking LED.cydsn\Bootloadable Blinking LED.cyprj|2bed8a29-b791-41e0-b439-3f0bf04f71dc
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8d92214e-eba8-4e84-84b2-a012892b409b
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|3a10ee7a-e47c-4dfd-b0be-ddaf677fa5ff
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|647958f4-b9a4-4d3a-a8dd-b0dfa4e40aed
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9abc7d5d-9397-424b-b0c0-706fc1280219
+C:\Program Files (x86)\Cypress\PSoC Creator\3.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ffdc954c-8abe-4d11-a9c8-c80c3488f152
