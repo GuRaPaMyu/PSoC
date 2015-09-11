@@ -1,4 +1,4 @@
---------------- Build Started: 09/09/2015 07:50:39 Project: Bootloadable Blinking LED, Configuration: ARM GCC 4.8.4 Debug ---------------
+--------------- Build Started: 09/11/2015 02:23:05 Project: Bootloadable Blinking LED, Configuration: ARM GCC 4.8.4 Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\Hashimoto\AppData\Local\Cypress Semiconductor\PSoC Creator\3.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "Z:\PSoC\Bootloadable Blinking LED.cydsn\Bootloadable Blinking LED.cyprj" -d CY8C4245AXI-483 -s "Z:\PSoC\Bootloadable Blinking LED.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation ...
@@ -23,4 +23,4 @@ cyelftool.exe -B "Z:\PSoC\Bootloadable Blinking LED.cydsn\CortexM0\ARM_GCC_484\D
 cyelftool.exe -S "Z:\PSoC\Bootloadable Blinking LED.cydsn\CortexM0\ARM_GCC_484\Debug\Bootloadable Blinking LED.elf"
 Flash used: 18432 of 32768 bytes (56.3%). Bootloader: 4352 bytes. Application: 13952 bytes. Metadata: 128 bytes.
 SRAM used: 1536 of 4096 bytes (37.5%). Stack: 1024 bytes. Heap: 256 bytes.
---------------- Build Succeeded: 09/09/2015 07:50:50 ---------------
+--------------- Build Succeeded: 09/11/2015 02:23:15 ---------------

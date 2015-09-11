@@ -52,15 +52,16 @@
 ******************************************************************************/
 #include <project.h>
 #include <math.h>
+#include <stdio.h>
 
-#define PARTS 1000
+#define PARTS 128
 
 int main()
 {
     UART_Start();
     
     int i;
-    unsigned char sin_val;
+    double sin_val;
     double inc_rate;
     
     inc_rate = M_PI * 2 / PARTS;
@@ -69,8 +70,8 @@ int main()
     {
       for(i=0;i<PARTS;i++)
       {
-        sin_val = (unsigned char)sin(inc_rate * i);
-        UART_PutChar(sin_val);
+        sin_val = sin(inc_rate * i) * 100;
+        UART_PutChar((char)sin_val + 100);
       }
     }
     

@@ -13,64 +13,13 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Bootloadable Blinking LED-000\Bootloadable Blinking LED\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source">
 <ExpandedNodeIds>
 <v>Bootloadable Blinking LED-000</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\TopDesign</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Bootloadable Blinking LED.cydwr</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Source Files</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Source Files\main.c</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable\Bootloadable.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable\Bootloadable.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cypins.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_BOOT.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_INT.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_PM.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock\UART_IntClock.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock\UART_IntClock.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cybootloader.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cybootloader.icf</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevice_trm.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydisabledsheets.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfitter.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfitter_cfg.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfitter_cfg.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfittergnu.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfitteriar.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cyfitterrv.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cymetadata.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Bootloadable Blinking LED-000</v>
@@ -81,59 +30,15 @@
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Source Files\main.c</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable\Bootloadable.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\Bootloadable\Bootloadable.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cypins.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_BOOT.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_INT.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART\UART_PM.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock\UART_IntClock.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\UART_IntClock\UART_IntClock.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cybootloader.c</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cybootloader.icf</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevice_trm.h</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Generated_Source\PSoC4\cydevicerv_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Bootloadable Blinking LED-000</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\TopDesign</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Bootloadable Blinking LED-000</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\TopDesign</v>
-<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -212,6 +117,10 @@
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\PSoC 4 Architecture TRM</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\PSoC 4200 Family Datasheet</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\System Reference Guides</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\System Reference Guides\cy_boot_v4_20</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Bootloadable_v1_30</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\cy_pins_v2_10</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\UART_v2_50</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Bootloadable Blinking LED-000</v>
@@ -219,6 +128,10 @@
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\PSoC 4 Architecture TRM</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\PSoC 4200 Family Datasheet</v>
 <v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\System Reference Guides</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\System Reference Guides\cy_boot_v4_20</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\Bootloadable_v1_30</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\cy_pins_v2_10</v>
+<v>Bootloadable Blinking LED-000\Bootloadable Blinking LED\UART_v2_50</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
